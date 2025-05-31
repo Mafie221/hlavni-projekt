@@ -56,7 +56,7 @@ if (window.location.pathname === '/movies.html') {
   
     
     if(selectedMovie) {
-
+try {
         const response = await fetch(`https://api.tvmaze.com/search/shows?q=${selectedMovie}`)
         const data = await response.json();
 
@@ -74,6 +74,9 @@ if (window.location.pathname === '/movies.html') {
             gallery.appendChild(img)
           }
         });
+      } catch (e) {
+        throw new Error(`Našla se tu chyba : ${e}`);
+        }
     }
   });
 }
