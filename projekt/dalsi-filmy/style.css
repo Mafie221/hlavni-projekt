@@ -29,8 +29,9 @@
 /* Systém */
 .movies-hw {
    width: 90%;
-   height: 100vh;
+   height: 100%;
    max-width: 900px;
+   min-height: 100vh;
    margin: auto;
 
 }
@@ -78,8 +79,3 @@
    cursor: pointer;
 }
 
-@media(max-width: 432px) {
-   .movies-hw {
-      height: 100%;
-   }
-}
